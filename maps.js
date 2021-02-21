@@ -25,4 +25,20 @@ function showMap(latCoords, longCoords) {
     zoom: 12,
     center: mapCenter,
   });
+
+  /*const iconBase =
+    "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
+
+  for (let i =0; i <mapList.length; i++) {
+    const marker = new google.maps.Marker({
+      position: mapList[i].locationName,
+      if (mapList[i].name.includes("Library")) {
+        icon: iconBase + "starbucks_mark.png",
+      }
+      else if (mapList[i].name.includes("Starbucks")) {
+        icon: iconBase + "library_mark.png",
+      }
+      map: map,
+    });
+  }*/
 }
