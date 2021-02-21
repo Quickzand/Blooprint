@@ -10,10 +10,12 @@ body {
   ul {
     list-style-type: none;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 0px;
     padding: 0;
     overflow: hidden;
     background-color: #03506F;
+    position:fixed;
+    width: 100vw;
   }
 
   li {
@@ -45,10 +47,10 @@ body {
   }
 
   #map {
-    height: 850px;
+    height: 900px;
     width: 100%;
     position: absolute;
-    bottom: 30px;
+    bottom: 0;
     right: 0;
   }
 
