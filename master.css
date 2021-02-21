@@ -6,7 +6,7 @@ body {
   margin: 0;
 }
 
-<style>
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -51,7 +51,7 @@ body {
     bottom: 30px;
     right: 0;
   }
-</style>
+
 /* 1.website foundation
   2.art
   3.integration with api
