@@ -26,6 +26,8 @@ function showMap(latCoords, longCoords) {
     center: mapCenter,
   });
 
+
+
   /*const iconBase =
     "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
 
