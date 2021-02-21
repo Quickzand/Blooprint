@@ -38,6 +38,9 @@ function showMap(latCoords, longCoords) {
       else if (mapList[i].name.includes("Starbucks")) {
         icon: iconBase + "library_mark.png",
       }
+      else {
+        icon: iconBase +"default_mark. png",
+      }
       map: map,
     });
   }*/
