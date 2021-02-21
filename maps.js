@@ -35,24 +35,14 @@ getDatabaseData(addMarker);
 
 function addMarker(locationListFake) {
   var locationList = JSON.parse(locationListFake).hotspots
-
-  for (let i = 0; i < locationList.length; i++) {
-    // console.log(parseInt(locationList[i].lat))
-    position = new google.maps.LatLng(parseFloat(locationList[i].lat), parseFloat(locationList[i].long))
-    if (locationList[i].locationName.includes("Library")) {
-      icon = "library_mark.png"
-    } else if (locationList[i].locationName.includes("Starbucks")) {
-      icon = "starbucks_mark.png"
-    } else {
-      icon = "default_mark.png"
+    for (let i = 0; i < locationList.length; i++) {
+      const marker = new google.maps.Marker({
+      position: new google.maps.LatLng(parseFloat(locationList[i].lat), parseFloat(locationList[i].long)),
+      map: map,
+      icon: "default_mark.png"
+  });
     }
-    const marker = new google.maps.Marker({
-      position: position,
-      icon: icon,
-      map: map
-    });
   }
-}
 
 
 function initMap(latCoords, longCoords) {
@@ -68,3 +58,19 @@ function initMap(latCoords, longCoords) {
   addMarker()
 
 }
+
+
+/*  position = new google.maps.LatLng(parseFloat(locationList[i].lat), parseFloat(locationList[i].long))
+  if (locationList[i].locationName.includes("Library")) {
+    icon = "library_mark.png"
+  } else if (locationList[i].locationName.includes("Starbucks")) {
+    icon = "starbucks_mark.png"
+  } else {
+    icon = "default_mark.png"
+  }
+  const marker = new google.maps.Marker({
+    position: position,
+    icon: icon,
+    map: map
+  });
+}*/
