@@ -48,7 +48,7 @@ body {
 
   #map {
     height: 900px;
-    width: 100%;
+    width: 50%;
     position: absolute;
     bottom: 0;
     right: 0;
