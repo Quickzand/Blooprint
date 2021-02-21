@@ -6,60 +6,54 @@ body {
   margin: 0;
 }
 
-  #slides
-  {
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
+#slidesContainer {}
 
-  }
-  #navBar {
-    list-style-type: none;
-    margin: 0;
-    margin-top: 0px;
-    padding: 0;
-    overflow: hidden;
-    background-color: #03506F;
-    position:fixed;
-    width: 100vw;
-  }
+#navBar {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 0px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #03506F;
+  position: fixed;
+  width: 100vw;
+}
 
-  .navBarOptions {
-    float: left;
-    border-right: 1px solid #bbb;
-  }
+.navBarOptions {
+  float: left;
+  border-right: 1px solid #bbb;
+}
 
-  .navBarOptions:last-child {
-    border-right: none;
-  }
+.navBarOptions:last-child {
+  border-right: none;
+}
 
-  .navBarOptions a {
-    display: block;
-    color: white;
-    /*text color */
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+.navBarOptions a {
+  display: block;
+  color: white;
+  /*text color */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-  .navBarOptions a:hover:not(.active) {
-    background-color: #0A043C;
-  }
+.navBarOptions a:hover:not(.active) {
+  background-color: #0A043C;
+}
 
-  .active {
-    background-color: #A3DDCB;
-    /*selected color*/
-    color: black;
-  }
+.active {
+  background-color: #A3DDCB;
+  /*selected color*/
+  color: black;
+}
 
-  #map {
-    height: 900px;
-    width: 50%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
+#map {
+  height: 900px;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
 /* 1.website foundation
   2.art
