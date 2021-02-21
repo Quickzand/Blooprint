@@ -26,7 +26,3 @@ function showMap(latCoords, longCoords) {
     center: mapCenter,
   });
 }
-
-/*const marker = new google.maps.Marker({
-  position: mapCenter,
-  map: map,**/*
