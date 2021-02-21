@@ -6,8 +6,6 @@
   <title> Wifi Finder </title>
 </head>
 
-
-
 <html>
 <head>
 <style>
@@ -44,7 +42,16 @@ li a:hover:not(.active) {
   background-color: #A3DDCB; /*selected color*/
   color: black;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
 </style>
+
+<div id ="map"></div>
+<script src="maps.js"></script>
 </head>
 <body>
 
@@ -55,5 +62,9 @@ li a:hover:not(.active) {
   <li style="float:right"><a href="index.html">About</a></li>
 </ul>
 
+<!--- API link with Goolge Maps --->
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMNVwb7EiooWG37l19PYCAw0b0g43p_uc&callback=initMap">
+</script>
 </body>
 </html>
