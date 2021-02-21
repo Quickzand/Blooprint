@@ -36,10 +36,10 @@ getDatabaseData(addMarker);
 function addMarker(locationList) {
   for (let i = 0; i < locationList; i++) {
     position: new google.maps.LatLng(locationList[i].latitude, locationList[i].longitude)
-    if (locationList[i].name.includes("Library")) {
+    if (locationList[i].locationName.includes("Library")) {
       icon: "library_mark.png"
     }
-    else if (locationList[i].name.includes("Starbucks")) {
+    else if (locationList[i].locationName.includes("Starbucks")) {
       icon: "starbucks_mark.png"
     }
     else {
