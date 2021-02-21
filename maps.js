@@ -31,23 +31,23 @@ function getDatabaseData(callback) {
   xhttp.send();
 }
 
-getDatabaseData(addMarker);
+getDatabaseData(newMarker);
 
-function addMarker(locationListFake) {
+function newMarker(locationListFake) {
   var locationList = JSON.parse(locationListFake).hotspots
-  for (let i = 0; i < locationListFake.length; i++) {
+  for (let i = 0; i < locationList.length; i++) {
     const marker = new google.maps.Marker({
       position: new google.maps.LatLng(parseFloat(locationList[i].lat), parseFloat(locationList[i].long)),
       map: map
     });
   }
-  }
+}
 
 
 function initMap(latCoords, longCoords) {
   const mapCenter = {
-    lat: latCoords,
-    lng: longCoords
+    lat: 27.7567667,
+    lng: -81.4639835
   }
 
   map = new google.maps.Map(document.getElementById("map"), {
@@ -55,7 +55,7 @@ function initMap(latCoords, longCoords) {
     center: mapCenter,
   });
 
-  addMarker()
+
 
 }
 

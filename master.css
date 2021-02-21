@@ -97,13 +97,14 @@ body {
 }
 
 .infoSidebarInfo {
-  width: 100%;
   text-align: right;
   font-size: 40px;
   font-weight: 200;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
   height: 100px;
-  display: grid;
+  display: flex;
+  align-items: center;
 }
 
 #infoSidebarLocation {
@@ -120,20 +121,59 @@ body {
   width: 100%;
 }
 
+.info {
+  width: 100%;
+  text-align: right;
+}
+
+.label {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 95px;
+  height: 95px;
+  float: left;
+}
+
 #infoSidebarWebsite.filled {
   background: #19bf04;
   text-align: center;
   cursor: pointer;
+  font-size: 40px;
+  font-weight: 200;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  height: 100px;
+  display: grid;
+  align-content: center;
+}
+
+#infoSidebarWebsite span {
+  text-align: center;
 }
 
 #infoSidebarWebsite.empty {
   background: #b0a8a4;
   cursor: not-allowed;
+  font-size: 40px;
+  font-weight: 200;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  height: 100px;
   text-align: center;
+  display: grid;
 }
 
 #infoSidebarEmail {
   border-bottom: 2px solid black;
+}
+
+#infoSidebarEmail .label {
+  background-image: url("images/mail.png");
+}
+
+#infoSidebarNumber .label {
+  background-image: url("images/phone.png");
 }
 
 #infoSidebarNumber {
