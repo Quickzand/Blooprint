@@ -8,5 +8,4 @@ function pullXMLFromServer {
   };
   xhttp.open("GET", "filename", true);
   xhttp.send();
-  http: //www.overpass-api.de/api/xapi?node[internet_access=yes][bbox=-171.791110603, 18.91619, -66.96466, 71.3577635769]  
 }

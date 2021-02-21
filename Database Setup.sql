@@ -31,6 +31,6 @@ BEGIN
   ELSE
 	  SET @tempID = @tempID + 1;
 	END IF;
-INSERT INTO stories VALUES (@tempID,img,NOW(),UID);
+INSERT INTO stories VALUES (@tempID,locationName,address,coordinate,locationType,email,phone,website);
   END;
   $
