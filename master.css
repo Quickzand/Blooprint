@@ -6,6 +6,17 @@ body {
   margin: 0;
 }
 
+.contactText
+{
+  position: absolute;
+  left: 0.5%;
+  top: 5%;
+  z-index: -99999999;
+  font-family:sans-serif;
+}
+}
+
+
 #buffer
 {
   position: absolute;
@@ -29,6 +40,7 @@ body {
   position: fixed;
   width: 100vw;
   z-index: 99999999;
+  font-family:sans-serif;
 }
 
 .navBarOptions {
