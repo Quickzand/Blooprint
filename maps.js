@@ -3,8 +3,7 @@ getUserLocation();
 function getUserLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(mapLocation, error);
-  }
-  else {
+  } else {
     alert("Sorry, please use a new device!");
   }
 }
@@ -19,31 +18,46 @@ function error(errorCode) {
   }
 }
 
+function getDatabaseData(callback) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Typical action to be performed when the document is ready:
+      callback(xhttp.responseText);
+    }
+  };
+  xhttp.open("GET", "retreiveDatabaseEntries.php", true);
+  xhttp.send();
+}
+
+getDatabaseData(addMarker);
+
+function addMarker(locationList) {
+  for (let i = 0; i < locationList; i++) {
+    position: new google.maps.LatLng(locationList[i].latitude, locationList[i].longitude)
+    if (locationList[i].name.includes("Library")) {
+      icon: "library_mark.png"
+    }
+    else if (locationList[i].name.includes("Starbucks")) {
+      icon: "starbucks_mark.png"
+    }
+    else {
+      icon: "default_mark.png"
+    }
+  }
+}
+
+
 function showMap(latCoords, longCoords) {
-  const mapCenter = { lat: latCoords, lng: longCoords }
+  const mapCenter = {
+    lat: latCoords,
+    lng: longCoords
+  }
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 12,
     center: mapCenter,
   });
 
+  addMarker()
 
-
-  /*const iconBase =
-    "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
-
-  for (let i =0; i <mapList.length; i++) {
-    const marker = new google.maps.Marker({
-      position: mapList[i].locationName,
-      if (mapList[i].name.includes("Library")) {
-        icon: iconBase + "starbucks_mark.png",
-      }
-      else if (mapList[i].name.includes("Starbucks")) {
-        icon: iconBase + "library_mark.png",
-      }
-      else {
-        icon: iconBase +"default_mark. png",
-      }
-      map: map,
-    });
-  }*/
 }
