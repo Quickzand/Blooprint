@@ -9,7 +9,7 @@ function getUserLocation() {
 }
 
 function mapLocation(position) {
-  showMap(position.coords.latitude, position.coords.longitude);
+  initMap(position.coords.latitude, position.coords.longitude);
 }
 
 function error(errorCode) {
@@ -23,6 +23,7 @@ function getDatabaseData(callback) {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       // Typical action to be performed when the document is ready:
+      console.log(xhttp.responseText)
       callback(xhttp.responseText);
     }
   };
@@ -48,7 +49,7 @@ function addMarker(locationList) {
 }
 
 
-function showMap(latCoords, longCoords) {
+function initMap(latCoords, longCoords) {
   const mapCenter = {
     lat: latCoords,
     lng: longCoords
