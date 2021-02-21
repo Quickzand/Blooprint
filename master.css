@@ -9,15 +9,19 @@ body {
 .contactText
 {
   position: absolute;
-  left: 0.5%;
-  top: 5%;
+  left: 25%;
+  top: 35%;
   z-index: -99999999;
   font-family:sans-serif;
+  background-color: #03506F;
+  border: 40px solid #03506F;
+  font-size: 40px;
+  color: white;
 }
 }
 
 
-#buffer
+.buffer
 {
   position: absolute;
   left: 70%;
