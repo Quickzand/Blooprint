@@ -107,7 +107,7 @@ body {
 }
 
 #infoSidebarLocation {
-  font-size: 50px;
+  font-size: 70px;
   text-align: center;
   font-weight: 600;
 }
@@ -129,6 +129,7 @@ body {
 #infoSidebarWebsite.empty {
   background: #b0a8a4;
   cursor: not-allowed;
+  text-align: center;
 }
 
 #infoSidebarEmail {
