@@ -81,14 +81,14 @@ body {
 
 #map {
   height: calc(100vh - 45px);
-  width: 70vw;
+  width: 80vw;
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
 #infoSidebar {
-  width: 30vw;
+  width: 20vw;
   height: calc(100vh - 45px);
   background: none;
   position: absolute;
@@ -133,7 +133,18 @@ body {
   width: 95px;
   height: 95px;
   float: left;
-  height: 90px;
+}
+
+#general .icon {
+  background-image: url("largePins/General.png");
+}
+
+#library .icon {
+  background-image: url("largePins/Library.png");
+}
+
+#starbucks .icon {
+  background-image: url("largePins/Starbucks.png");
 }
 
 /* 1.website foundation
