@@ -4,62 +4,67 @@
 <head>
   <meta charset="utf-8">
   <title> Wifi Panda </title>
+  <link rel="stylesheet" href="master.css">
 </head>
 
 
 <html>
+
 <head>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  margin-top: 10px;
-  padding: 0;
-  overflow: hidden;
-  background-color: #03506F;
-}
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      margin-top: 10px;
+      padding: 0;
+      overflow: hidden;
+      background-color: #03506F;
+    }
 
-li {
-  float: left;
-  border-right:1px solid #bbb;
-}
+    li {
+      float: left;
+      border-right: 1px solid #bbb;
+    }
 
-li:last-child {
-  border-right: none;
-}
+    li:last-child {
+      border-right: none;
+    }
 
-li a {
-  display: block;
-  color: white;   /*text color */
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    li a {
+      display: block;
+      color: white;
+      /*text color */
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
 
-li a:hover:not(.active) {
-  background-color: #0A043C;
-}
+    li a:hover:not(.active) {
+      background-color: #0A043C;
+    }
 
-.active {
-  background-color: #A3DDCB; /*selected color*/
-  color: black;
-}
+    .active {
+      background-color: #A3DDCB;
+      /*selected color*/
+      color: black;
+    }
 
-#map {
-  height: 850px;
-  width: 100%;
-  position: absolute;
-  bottom: 30px;
-  right: 0;
-}
+    #map {
+      height: 850px;
+      width: 100%;
+      position: absolute;
+      bottom: 30px;
+      right: 0;
+    }
+  </style>
 
-</style>
-
-<div id ="map"></div>
-<script src="maps.js"></script>
+  <div id="map"></div>
+  <script src="maps.js"></script>
 </head>
+
 <body>
 
+<<<<<<< HEAD
 <ul>
   <li><img src="logo.png" alt="m" style="width:59px;height:40px;"></a></li>
   <li><a class="active" href="index.html">Home</a></li>
@@ -67,9 +72,17 @@ li a:hover:not(.active) {
   <li><a href="index.html">Contact</a></li>
   <li style="float:right"><a href="about.html">About</a></li>
 </ul>
+=======
+  <ul>
+    <li><img src="logo.png" alt="m" style="width:90px;height:40px;"></a></li>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="index.html">News</a></li>
+    <li><a href="index.html">Contact</a></li>
+    <li style="float:right"><a href="about.html">About</a></li>
+  </ul>
+>>>>>>> d00e70cf5f36404b91da3b7f923e5bf17f70fc18
 
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMNVwb7EiooWG37l19PYCAw0b0g43p_uc&callback=initMap">
-</script
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMNVwb7EiooWG37l19PYCAw0b0g43p_uc&callback=initMap"> </script>
 </body>
+
 </html>
