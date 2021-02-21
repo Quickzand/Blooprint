@@ -25,9 +25,4 @@ function showMap(latCoords, longCoords) {
     zoom: 12,
     center: mapCenter,
   });
-
-  const marker = new google.maps.Marker({
-    position: mapCenter,
-    map: map,
-  });
 }
