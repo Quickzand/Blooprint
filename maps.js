@@ -35,13 +35,12 @@ getDatabaseData(addMarker);
 
 function addMarker(locationListFake) {
   var locationList = JSON.parse(locationListFake).hotspots
-    for (let i = 0; i < locationList.length; i++) {
-      const marker = new google.maps.Marker({
+  for (let i = 0; i < locationListFake.length; i++) {
+    const marker = new google.maps.Marker({
       position: new google.maps.LatLng(parseFloat(locationList[i].lat), parseFloat(locationList[i].long)),
-      map: map,
-      icon: "default_mark.png"
-  });
-    }
+      map: map
+    });
+  }
   }
 
 
@@ -50,6 +49,7 @@ function initMap(latCoords, longCoords) {
     lat: latCoords,
     lng: longCoords
   }
+
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 12,
     center: mapCenter,
