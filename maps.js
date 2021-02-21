@@ -36,9 +36,16 @@ getDatabaseData(newMarker);
 function newMarker(locationListFake) {
   var locationList = JSON.parse(locationListFake).hotspots
   for (let i = 0; i < locationList.length; i++) {
+    if (locationList[i].locationName.includes("Library")) {
+      icon = "small pins/library_mark.png"
+    } else if (locationList[i].locationName.includes("Starbucks")) {
+      icon = "small pins/starbucks_mark.png"
+    } else {
+      icon = "small pins/default_mark.png"
+    }
     const marker = new google.maps.Marker({
       position: new google.maps.LatLng(parseFloat(locationList[i].lat), parseFloat(locationList[i].long)),
-      icon: default_mark
+      icon: icon,
       map: map
     });
   }
