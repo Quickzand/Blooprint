@@ -1,6 +1,9 @@
-function initMap() {
+navigator.geolocation.getCurrentPosition(function(position) {
+  initMap(position.coords.latitude, position.coords.longitude);
+});
 
-  const mapCenter = { lat: 	42.360001, lng: -71.092003 }
+function initMap(latCoords, lngCoords) {
+  const mapCenter = { lat: latCoords, lng: lngCoords }
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 12,
     center: mapCenter,
